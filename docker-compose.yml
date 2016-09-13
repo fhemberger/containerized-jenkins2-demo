@@ -1,0 +1,16 @@
+version: "2"
+services:
+  jenkins:
+    build: .
+    environment:
+      # JENKINS_OPTS: --httpPort=-1 --httpsPort=8080 --httpsCertificate=/var/lib/jenkins/ssl/jenkins.crt --httpsPrivateKey=/var/lib/jenkins/ssl/jenkins.key
+    ports:
+      - 8080:8080
+      - 50000:50000
+    read_only: true
+    restart: on-failure:5
+    volumes:
+      - ./ssl:/var/lib/jenkins/ssl:ro
+      - ./jenkins_home:/var/jenkins_home
+      - ./tmp:/tmp
+      - /var/run/docker.sock:/var/run/docker.sock

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+SUBJ="
+C=DE
+ST=
+O=
+localityName=
+commonName=localhost
+organizationalUnitName=
+emailAddress=
+"
+
+openssl req -subj "$(echo -n "$SUBJ" | tr "\n" "/")" -x509 -nodes -sha256 -days 365 -newkey rsa:4069 -keyout ssl/jenkins.key -out ssl/jenkins.crt
+# openssl dhparam -out ssl/dhparam.pem 4096

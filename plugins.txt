@@ -1,0 +1,8 @@
+blueocean
+build-pipeline-plugin
+build-timeout
+credentials-binding
+docker-build-publish
+github-oauth
+workflow-aggregator
+ws-cleanup
