@@ -1,6 +1,7 @@
-# docker-jenkins2-demo
+> Had to change the repo name because the [trademark guidelines of Docker Inc.](https://www.andreas-jung.com/contents/dont-use-docker-in-github-repo-names-or-as-twitter-handle) don't allow fair use by the community.
 
-This is a demo setup for Jenkins 2 using Docker. It pre-installs a few useful plug-ins, including:
+# Demo setup for Jenkins 2 using Docker.
+It pre-installs a few useful plug-ins, including:
 
 - GitHub auth
 - Build pipeline setup
